@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+<!-- daisyui cdn links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- tailwind cdn links -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-800">
+    <section class="max-w-md bg-white min-h-screen mx-auto py-6">
+        <header>
+            <nav class="flex justify-center items-center mt-20">
+                <div class="relative flex items-center mt-10 w-3/6 ">
+                    <img class="absolute w-50" src="./assets/bg.png" alt="">
+                    <img class="w-16 ml-20" src="./assets/Group.png" alt="">
+                </div>
+            </nav>
+        </header>
+<!-- Login section -->
+        <div class="">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text text-lg font-bold">Mobaile Number</span>
+                    </label>
+                    <input id="phone-number" value="01385693277" type="number" placeholder="type your number" class="input"  required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text text-xl font-bold">Pin</span>
+                    </label>
+                    <input id="pin" value="1234" type="number" placeholder="type your pin" class="input" required />
+                    <label class="label">
+                      <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                    </label>
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="login-btn" class="btn bg-blue-500 text-white font-bold text-xl hover:bg-blue-600">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <script src="./script/login.js"></script>
+    </section>
+</body>
+</html>

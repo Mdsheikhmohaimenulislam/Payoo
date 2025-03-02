@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo</title>
+<!-- daisyui cdn links -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- tailwind cdn links -->
+    <script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome cdn links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-slate-800">
+    <main class="max-w-md bg-white min-h-screen mx-auto py-6">
+        <header>
+            <nav class="flex justify-around mb-5">
+                <div class="flex">
+                    <img class="w-16" src="./assets/Group.png" alt="">
+                    <div>
+                        <p class="text-2xl text-black font-bold">$ <span id="display-money"> 45000</span></p>
+                        <p class="text-black">Available Balance</p>
+                    </div>
+                </div>
+                <div>
+                    <button id="log-out" class="text-black border hover:bg-blue-500 hover:text-white p-2">Log Out <i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+            </nav>
+            <hr>
+
+<!--Card section  -->
+            <section class="mt-5">
+                <div class=" p-6">
+                    <h1 class="text-2xl text-black font-bold"><i class="fa-solid fa-fire text-orange-500"></i> Welcome to Payooo!</h1>
+                    <p >
+                        Enjoy easy and convenient financial services with us. Cashout charge is low and
+                     </p>
+                </div>
+<!-- Card container -->
+                     <div class="box">
+                        <div class="card grid grid-cols-3 gap-5 mb-5   p-5">
+                            <div id="Add-money-box" class="box cursor-pointer border border-black p-4 rounded-lg text-center">
+                                <img class="w-9 mx-auto" src="./assets/wallet1.png" alt="">
+                                <h3 class="mt-5 text-black">Add Money</h3>
+                            </div>
+                            <div id="Cash-out-box" class="box border cursor-pointer border-black p-4 rounded-lg text-center">
+                                <img class="w-9  mx-auto" src="./assets/send1.png" alt="">
+                                <h3 class="mt-5 text-black">Cash Out</h3>
+                            </div>
+                            <div id="transfer-box" class="box border border-black p-4 rounded-lg text-center">
+                                <img class="w-8 mx-auto" src="./assets/money1.png" alt="">
+                                <h3 class="mt-1 text-black">Transfer Money</h3>
+                            </div>
+                            <div id="get-bonuse-box" class="box border border-black p-4 rounded-lg text-center">
+                                <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="">
+                                <h3 class="mt-5 text-black">Get Bonus</h3>
+                            </div>
+                            <div id="pay-bill-box" class="box border border-black p-4 rounded-lg text-center">
+                                <img class="w-8 mx-auto" src="./assets/purse1.png" alt="">
+                                <h3 class="mt-5 text-black">Pay Bill</h3>
+                            </div>
+                            <div id="transection-btn-box" class="box border border-black p-4 rounded-lg text-center">
+                                <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="">
+                                <h3 class="mt-5 text-black">Transaction</h3>
+                            </div>
+                        </div>
+                        <hr>
+                     </div>
+<!-- From section -->
+                     <section id="Addmoney">
+                        <div>
+                            <div class="hero-content flex-col lg:flex-row-reverse">
+                              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                                <form class="card-body">
+                                  <div class="form-control">
+                                    <label>
+                                        <span class="text-2xl p-1 text-blue-500">Add Money</span>
+                                        <select id="allbank" class="select select-bordered mt-2 w-full max-w-xs">
+                                            <option disabled selected>Select</option>
+                                            <option value="Bkash">Bkash</option>
+                                            <option value="Nagod">Nagod</option>
+                                            <option value="DBBL">DBBL</option>
+                                          </select>
+                                    </label>
+                                    <label class="label">
+                                      <span class="label-text font-bold">Acount number</span>
+                                    </label>
+                                    <input id="acount-number" value="01385693277" type="number" placeholder="type Acount number" class="input" required />
+                                  </div>
+                                  <div class="form-control">
+                                    <label class="label">
+                                        <span  class="label-text font-bold">Amount</span>
+                                      </label>
+                                      <input id="Amount" type="number" placeholder="type your Amount" class="input" required />
+                                    <label class="label">
+                                      <span  class="label-text font-bold">pin</span>
+                                    </label>
+                                    <input id="pin" value="1234" type="number" placeholder="type pin" class="input" required />
+                                    <label class="label">
+                                      <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                                    </label>
+                                  </div>
+                                  <div class="form-control mt-6">
+                                    <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                     </section>
+            </section>
+<!-- Casout -->
+            <section id="cashout">
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                          <div class="form-control">
+                            <h1 class="text-2xl p-1 text-blue-500 text-center mb-5">Cash Out</h1>
+                            <select id="allbank-Cashout" class="select select-bordered mt-2 w-full max-w-xs">
+                              <option disabled selected>Select</option>
+                              <option value="Bkash">Bkash</option>
+                              <option value="Nagod">Nagod</option>
+                              <option value="DBBL">DBBL</option>
+                            </select>
+                            <label class="label">
+                              <span class="label-text font-bold">Agent Number</span>
+                            </label>
+                            <input id="agent-number" value="01385693277" type="number" placeholder="type Agent Number" class="input" required />
+                          </div>
+                          <div class="form-control">
+                            <label class="label">
+                                <span  class="label-text font-bold">Amount</span>
+                              </label>
+                              <input id="withdrow" type="number" placeholder="Amount to withdrow" class="input" required />
+                            <label class="label">
+                              <span  class="label-text font-bold">pin</span>
+                            </label>
+                            <input id="cash-out-pin" value="1234" type="number" placeholder="type pin" class="input" required />
+                            <label class="label">
+                              <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                            </label>
+                          </div>
+                          <div class="form-control mt-6">
+                            <button id="withdrow-btn" class="btn btn-primary">Withdrow</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+<!-- Transfer -->
+            <section id="transfer">
+              <div class="">
+                  <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                        <div class="form-control">
+                          <h1 class="text-2xl p-1 text-blue-500 text-center mb-5">Transfer Money</h1>
+                          <select id="allbank-transfer" class="select select-bordered mt-2 w-full max-w-xs">
+                            <option disabled selected>Select</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagod">Nagod</option>
+                            <option value="DBBL">DBBL</option>
+                          </select>
+                          <label class="label">
+                            <span class="label-text font-bold">Transfer Number</span>
+                          </label>
+                          <input id="transfer-number" value="01385693277" type="number" placeholder="type transfer Number" class="input" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                              <span  class="label-text font-bold">Transfer Amount</span>
+                            </label>
+                            <input id="transfer-money" type="number" placeholder="Amount" class="input" required />
+                          <label class="label">
+                            <span  class="label-text font-bold">pin</span>
+                          </label>
+                          <input id="transferPin" value="1234" type="number" placeholder="type pin" class="input" required />
+                          <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                          </label>
+                        </div>
+                        <div class="form-control mt-6">
+                          <button id="transfer-btn" class="btn btn-primary">Transfer</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+          </section>
+<!-- Pay Bill  -->
+            <section id="pay-bill">
+              <div class="">
+                  <div class="hero-content flex-col lg:flex-row-reverse">
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                      <form class="card-body">
+                        <div class="form-control">
+                          <h1 class="text-2xl p-1 text-blue-500 text-center mb-5">Pay Bill</h1>
+
+                          <label>
+                            <select id="all-bill" class="select select-bordered mt-2 w-full max-w-xs">
+                                <option disabled selected>Select Bill Month</option>
+                                <option value="January">January 2025</option>
+                                <option value="February">February 2025</option>
+                                <option value="March">March 2025</option>
+                                <option value="April">April 2025</option>
+                              </select>
+                        </label>
+                          <label class="label">
+                            <span class="label-text font-bold">Bill Number</span>
+                          </label>
+                          <input id="bill-number" value="883856932856" type="number" placeholder="type Bill Number" class="input" required />
+                        </div>
+                        <div class="form-control">
+                          <label class="label">
+                              <span  class="label-text font-bold">Amount</span>
+                            </label>
+                            <input id="amount-bill" type="number" placeholder="Amount to Pay Bill" class="input" required />
+                          <label class="label">
+                            <span  class="label-text font-bold">pin</span>
+                          </label>
+                          <input id="bill-pin" value="1234" type="number" placeholder="type pin" class="input" required />
+                          <label class="label">
+                            <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                          </label>
+                        </div>
+                        <div class="form-control mt-6">
+                          <button id="bill-btn" class="btn btn-primary">Pay Bill</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+          </section>
+<!-- Get Bonus -->
+          <section id="Get-Bonus">
+            <div>
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                      <div class="form-control">
+                        <label>
+                            <h1 class="text-2xl p-1 text-blue-500 mb-5 text-center">Get Bonus</h1>
+                        </label>
+                        <label class="label">
+                          <span class="label-text font-bold">Acount number</span>
+                        </label>
+                        <input id="acount-number" value="01385693277" type="number" placeholder="type Acount number" class="input" required />
+                      </div>
+                      <div class="form-control">
+                        <label class="label">
+                            <span  class="label-text font-bold">Bonus Only 20 Taka</span>
+                          </label>
+                          <input id="Bonus" type="number" value="20"  class="input" required />
+                        <label class="label">
+                          <span  class="label-text font-bold">pin</span>
+                        </label>
+                        <input id="bonus-pin" value="1234" type="number" placeholder="type pin" class="input" required />
+                        <label class="label">
+                          <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                        </label>
+                      </div>
+                      <div class="form-control mt-6">
+                        <button id="Get-onus-btn" class="btn btn-primary">Get Bonus</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+         </section>
+ <!-- transection-historys -->
+         <section id="transection-historys">
+          <div class="hero-content flex-col lg:flex-row-reverse">
+                <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                  <form class="card-body">
+                    <div class="form-control">
+                      <h1 class="text-2xl p-1 text-blue-500 text-center mb-5">Transection Historys</h1>
+                    </div>
+                    <div id="transection-container">
+                    </div>
+                  </form>
+                </div>
+          </div>
+      </section>
+        </header>
+    </main>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./script/addMoney.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/cashout.js"></script>
+    <script src="./script/logOut.js"></script>
+    <script src="./script/payBill.js"></script>
+    <script src="./script/getBonus.js"></script>
+    <script src="./script/transection.js"></script>
+</body>
+</html>

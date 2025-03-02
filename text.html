@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="hello">hello</button>
+        <button id="wellcome">Wellcome</button>
+    
+    
+    
+        <div id="loi">
+            <h1>Hi, I am loi ...!!</h1>
+        </div>
+    
+        <div id="dubai">
+            <h1>Wellcome to dubai</h1>
+        </div>
+    </div>
+    <script>
+        document.getElementById('hello').addEventListener('click',function(){
+            document.getElementById('loi').style.display = 'block'
+            document.getElementById('dubai').style.display = 'none'
+        })
+
+
+
+        document.getElementById('wellcome').addEventListener('click',function(){
+            document.getElementById('dubai').style.display = 'block'
+            document.getElementById('loi').style.display = 'none'
+        })
+    </script>
+</body>
+</html>
