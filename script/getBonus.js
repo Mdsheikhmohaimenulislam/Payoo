@@ -15,6 +15,7 @@ const convertDisplayMoney = parseFloat(displayMoney);
 if(acountNumber.length === 11){
      if(convertbonusPin === 1234){
         if(convertBonus === 20){
+            alert("Successfull Add Bonus")
             const sum = convertBonus + convertDisplayMoney;
             document.getElementById('display-money').innerText = sum;
         }
